@@ -1,0 +1,38 @@
+# Übersetzung in die deutsche Sprache
+command:
+  cannot_be_used_by_console: "Dieser Befehl kann nicht über die Konsole verwendet werden!"
+  cannot_edit_owner: "&4Du kannst den Besitzer dieses Schildes nicht ändern. Du solltest das Schild stattdessen zerstören."
+  line_number_out_of_bounds: "&4Bitte gib eine Zeilennummer von 2 bis 4 ein."
+  no_sign_selected: "&4Du musst zuerst ein Schild auf einem deiner geschützten Blöcke auswählen, indem du mit der rechten Maustaste darauf klickst."
+  no_permission: "&4Du hast nicht die Berechtigung, diesen Befehl auszuführen."
+  player_name_too_long: "&4Der Name besteht aus mehr als 16 Zeichen (länger als Mojang erlaubt), weshalb er nicht auf das Schild passt."
+  plugin_reloaded: "&6Konfiguration neu geladen!"
+  sign_no_longer_part_of_protection: "&4Das ausgewählte Schild gehört nicht mehr zu einem geschützten Block."
+  updated_sign: "&6Das Schild wurde aktualisiert!"
+protection:
+  add_more_users_sign_instead: "&4Es ist nur ein Schild mit [Privat] für einen Schutz möglich. Füge stattdessen ein Schild mit [Mehr Benutzer] hinzu."
+  bypassed: "&6Du hast einen Schutz von {0} umgangen."
+  can_only_add_protection_sign: "&4Es kann nur ein [Privat] oder [Mehr Benutzer] Schild an diesem Block platziert werden. Mehr geht nicht."
+  cannot_change_sign: "&4Du kannst ein Schild nicht in der Nähe eines beanspruchten Behälters ändern."
+  chest_hint: "&6Platziere ein Schild an dieser Truhe, um sie zu schützen."
+  claimed_container: "&6Block bzw. Bereich geschützt."
+  claimed_manually: "&6Geschützt! Nur die auf dem Schild aufgeführten Personen können darauf zugreifen."
+  expired: "&6Der Schutz dieses Blocks wurde aufgrund von Inaktivität des Besitzers aufgehoben."
+  in_wilderness: "&4Du befindest dich in der Wildnis, daher kannst du hier keinen Schutz erstellen."
+  is_claimed_by: "&6Dieser Block gehört {0}."
+  no_access: "&4Du kannst diesen Block nicht verwenden, er ist durch {0} geschützt."
+  no_permission_for_claim: "&4Du hast nicht die Berechtigung, einen Behälter zu schützen."
+  not_nearby: "&4Es ist kein zu schützender Block in der Nähe. (Umschalt+)Rechtsklick auf einen Behälter mit einem Schild in deiner Hand, um ihn zu schützen."
+  selected_sign: "&6Schild ausgewählt. Gib \"/blockbolt <Zeilennummer> <Name>\" ein, um das gewählte Schild zu bearbeiten. Alternativ füge Folgendes hinzu: &n[Redstone]&r&6 &n[Jeder]&r&6."
+tag:
+  everyone: ["Jeder", "Everyone"]
+  timer: "Timer"
+  redstone: "Redstone"
+  private: ["[Privat]", "[Private]"]
+  more_users: ["[Mehr Benutzer]", "[More Users]"]
+  golem: ["Golem", "Golems"]
+updater:
+  more_information: "&6Mehr Informationen: {0}"
+  unsupported_server: "&4Die neueste Version von ${project.name} (Version {0}) unterstützt diese Minecraft-Version nicht mehr, sondern nur noch Minecraft {1}."
+  update_available: "&6Eine Aktualisierung für ${project.name} (Version {0}) steht zum manuellen Herunterladen bereit."
+  updated_automatically: "&6Ein Update wird beim nästen Server-Neustart installiert."

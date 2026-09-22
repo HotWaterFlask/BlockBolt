@@ -1,0 +1,156 @@
+# Config file of ${project.name}.
+# This file was originally created by version ${project.version}.
+
+# 插件使用的语言文件。这将在本目录下生成该名称的文件，
+# 您可以对其进行自定义修改以调整插件的提示信息。
+# 插件内置的预制语言文件包括：
+# - translations-zh.yml (简体中文)
+# - translations-zh-hk.yml (繁体中文-香港)
+# - translations-zh-tw.yml (繁体中文-台湾)
+# - translations-en.yml (English)
+# - translations-cs.yml
+# - translations-de.yml
+# - translations-es.yml
+# - translations-fr.yml
+# - translations-hu.yml
+# - translations-id.yml
+# - translations-it.yml
+# - translations-ja.yml
+# - translations-kr.yml
+# - translations-nl.yml
+# - translations-pl.yml
+# - translations-tr.yml
+# - translations-vi.yml
+languageFile: translations-zh.yml
+
+# 检查更新设置。可选值：
+# JUST_NOTIFY - 检查更新，仅向管理员发送提示
+# DISABLED - 禁用更新检查
+updater: DISABLED
+
+# 关于“方块标签”（Tag）：
+# 下面的方块列表里，除了写单个方块名，还可以写方块标签，格式为 "#minecraft:标签名"。
+# 一个标签代表一整套方块（例如 #minecraft:wooden_doors 等于所有木门），方便维护。
+# 注意：YAML 语法里 # 是注释符号，所以标签必须用引号包住，写成 "#minecraft:wooden_doors"。
+# 若某个标签在当前服务器版本不存在，插件会在后台提示并忽略该行，不会报错。
+# 方块 ID 查询：https://minecraft.wiki/w/Java_Edition_data_values/Blocks
+# 方块标签查询：https://minecraft.wiki/w/Block_tag_(Java_Edition)
+
+# ==============================================================================
+# 第一类：独立方块类（protectableStandard）
+# 包含所有容器、功能方块、重力方块（铁砧/龙蛋）及独立栅栏门。
+# 贴上告示牌后，自动向上下左右前后 6 个方向进行同类方块扩散连锁。
+# ==============================================================================
+chainStandardBlocks: true                 # 是否开启第一类独立方块连锁（关闭后仅保护单个方块/大箱子）
+
+protectableStandard:
+# --- 基础容器与工作方块 ---
+- minecraft:barrel                        # 木桶
+- minecraft:beacon                        # 信标
+- minecraft:blast_furnace                 # 高炉
+- minecraft:brewing_stand                 # 酿造台
+- minecraft:chest                         # 箱子
+- minecraft:crafter                       # 合成器（自动合成台）
+- minecraft:crafting_table                # 工作台
+- minecraft:dispenser                     # 发射器
+- minecraft:dropper                       # 投掷器
+- minecraft:enchanting_table              # 附魔台
+- minecraft:furnace                       # 熔炉
+- minecraft:hopper                        # 漏斗
+- minecraft:jukebox                       # 唱片机
+- minecraft:lectern                       # 讲台
+- minecraft:smoker                        # 烟熏炉
+- minecraft:trapped_chest                 # 陷阱箱
+
+# --- 铜箱系列（方块标签，一个标签包含全部 8 种铜箱） ---
+- "#minecraft:copper_chests"
+
+# --- 铁砧系列（受保护时防重力悬空保持；标签包含铁砧/开裂的铁砧/损坏的铁砧） ---
+- "#minecraft:anvil"
+
+# --- 特殊方块（受保护时防重力悬空与防传送） ---
+- minecraft:dragon_egg                    # 龙蛋
+
+# --- 潜影盒系列（方块标签，包含未染色及全部 16 种染色潜影盒） ---
+- "#minecraft:shulker_boxes"
+
+# --- 木架系列（方块标签，包含全部 12 种木架） ---
+- "#minecraft:wooden_shelves"
+
+# --- 栅栏门系列（方块标签，包含全部木栅栏门） ---
+- "#minecraft:fence_gates"
+
+# ==============================================================================
+# 第二类：立门类（protectableDoors）
+# 包含所有立式木门、铁门、铜门。
+# 保护上下两半部、地基支撑方块、门上方块及相连同种门；双开门对称联动开闭。
+# ==============================================================================
+chainDoors: true                          # 是否开启第二类立门连锁（关闭后仅保护单门或独立双开门）
+
+protectableDoors:
+# --- 木门系列（方块标签，包含全部木门：橡木/云杉/竹/樱花/苍白橡木等） ---
+- "#minecraft:wooden_doors"
+
+# --- 铁门与铜门系列（没有对应标签，逐个列出） ---
+- minecraft:copper_door                   # 铜门
+- minecraft:exposed_copper_door           # 斑驳的铜门
+- minecraft:iron_door                     # 铁门
+- minecraft:oxidized_copper_door          # 氧化的铜门
+- minecraft:weathered_copper_door         # 风化的铜门
+- minecraft:waxed_copper_door             # 涂蜡的铜门
+- minecraft:waxed_exposed_copper_door     # 涂蜡的斑驳铜门
+- minecraft:waxed_oxidized_copper_door    # 涂蜡的氧化铜门
+- minecraft:waxed_weathered_copper_door   # 涂蜡的风化铜门
+
+# ==============================================================================
+# 第三类：横向依附类（protectableAttachables）
+# 包含所有活板门等附着方块。
+# 保护依附原木/墙体方块与整组相连方块；相对面对面的活板门对称联动翻折。
+# ==============================================================================
+chainAttachables: true                    # 是否开启第三类横向依附连锁（关闭后仅保护单个活板门）
+
+protectableAttachables:
+# --- 木活板门系列（方块标签，包含全部木活板门） ---
+- "#minecraft:wooden_trapdoors"
+
+# --- 铁活板门与铜活板门系列（没有对应标签，逐个列出） ---
+- minecraft:copper_trapdoor               # 铜活板门
+- minecraft:exposed_copper_trapdoor       # 斑驳的铜活板门
+- minecraft:iron_trapdoor                 # 铁活板门
+- minecraft:oxidized_copper_trapdoor      # 氧化的铜活板门
+- minecraft:weathered_copper_trapdoor     # 风化的铜活板门
+- minecraft:waxed_copper_trapdoor         # 涂蜡的铜活板门
+- minecraft:waxed_exposed_copper_trapdoor # 涂蜡的斑驳铜活板门
+- minecraft:waxed_oxidized_copper_trapdoor # 涂蜡的氧化铜活板门
+- minecraft:waxed_weathered_copper_trapdoor # 涂蜡的风化铜活板门
+
+# 门或活板门在自动关闭前保持开启的默认秒数。
+# 玩家可以通过在告示牌上写入 [Timer:X] 标签来覆盖此数值（X 为 0 到 9 的数字）。
+# 设置为 0 或负数时，门永远不会自动关闭。
+# 使用红石打开门时，门同样不会自动关闭。
+defaultDoorOpenSeconds: 0
+
+# 容器物主离线多少天后解除锁定（保护失效）。
+# 设置为 0 或负数时永不过期。
+# 注意：此设置仅适用于在线模式（正版）服务器，离线模式下已自动禁用过期功能。
+autoExpireDays: 0
+
+# 除了玩家破坏保护外，本插件默认还会拦截环境/实体对保护方块的破坏（如苦力怕和TNT爆炸）。
+# 如果您希望允许某些特定方式破坏保护，可以在此处添加对应类型。
+# 例如：allowDestroyBy: [CREEPER, TNT] 将允许苦力怕和TNT炸毁受保护方块。
+# 可选值包括：
+# BLOCK_EXPLOSION - 方块爆炸（如床在下界爆炸）
+# CREEPER         - 苦力怕爆炸破坏
+# ENDERMAN        - 末影人搬起方块
+# FIRE            - 火焰燃烧
+# GHAST           - 恶魂火球爆炸
+# GOLEM           - 铜傀儡打开箱子
+# PISTON          - 活塞推动移除告示牌
+# SAPLING         - 树苗生长破坏告示牌
+# TNT             - TNT 实体爆炸
+# ZOMBIE          - 僵尸破门
+# UNKNOWN         - 其他未知攻击方式
+allowDestroyBy: []
+
+# 配置文件版本号（请勿修改）
+configVersion: 2

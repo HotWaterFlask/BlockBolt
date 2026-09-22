@@ -1,0 +1,36 @@
+package top.hotwaterflask.blockbolt.impl.profile;
+
+import top.hotwaterflask.blockbolt.Translator;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.bukkit.command.CommandSender;
+
+/**
+ * Simply returns the key.
+ *
+ */
+public class NullTranslator extends Translator {
+
+    @Override
+    public String get(Translation key) {
+        return key.toString();
+    }
+
+    @Override
+    public String getWithoutColor(Translation key) {
+        return key.toString();
+    }
+
+	@Override
+	public List<String> getAll(Translation key) {
+		return Arrays.asList(key.toString());
+	}
+
+	@Override
+	public List<String> getAllWithoutColor(Translation key) {
+		return Arrays.asList(key.toString());
+	}
+
+}

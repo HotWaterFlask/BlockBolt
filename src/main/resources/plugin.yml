@@ -1,0 +1,62 @@
+name: ${project.name}
+version: "${project.version}"
+main: top.hotwaterflask.blockbolt.impl.BlockBoltPluginImpl
+author: HotWaterFlask
+load: startup
+api-version: "1.20"
+softdepend: [Guilds, Factions, mcMMO, Towny]
+folia-supported: true
+permissions:
+  blockbolt.protect:
+    description: "Protect containers and doors."
+    default: true
+  blockbolt.bypass:
+    description: "Bypass someone else's protection, but don't allow destroying it."
+    default: op
+  blockbolt.admin:
+    description: "Edit someone's protection signs, or remove the protection entirely."
+    default: op
+  blockbolt.reload:
+    description: "Reload the plugin using /blockbolt reload."
+    default: op
+  blockbolt.wilderness:
+    description: "Place chests in the wilderness (outside of Towny claims)"
+    default: true
+  blocklocker.protect:
+    description: "Legacy BlockLocker permission"
+    children:
+      blockbolt.protect: true
+  blocklocker.bypass:
+    description: "Legacy BlockLocker permission"
+    children:
+      blockbolt.bypass: true
+  blocklocker.admin:
+    description: "Legacy BlockLocker permission"
+    children:
+      blockbolt.admin: true
+  blocklocker.reload:
+    description: "Legacy BlockLocker permission"
+    children:
+      blockbolt.reload: true
+  blocklocker.wilderness:
+    description: "Legacy BlockLocker permission"
+    children:
+      blockbolt.wilderness: true
+commands:
+  blockbolt:
+    description: "BlockBolt main command."
+    usage: "/<command> [2|3|4 <text> | reload]"
+    aliases: [bb, deadbolt, lockette, blocklocker, bl]
+  deadbolt:
+    description: "Commands for Deadbolt / Lockette sign editing and management."
+    usage: "/<command> [2|3|4 <text> | reload]"
+    aliases: [lockette, blockbolt, bb, blocklocker, bl]
+  lockette:
+    description: "Lockette commands for sign editing and management."
+    usage: "/<command> [2|3|4 <text> | reload]"
+    aliases: [deadbolt, blockbolt, bb, blocklocker, bl]
+  blocklocker:
+    description: "Legacy BlockLocker command."
+    usage: "/<command> [2|3|4 <text> | reload]"
+    aliases: [bl]
+

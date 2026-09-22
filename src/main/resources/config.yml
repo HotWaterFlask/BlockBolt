@@ -144,12 +144,13 @@ autoExpireDays: 0
 # ENDERMAN        - 末影人搬起方块
 # FIRE            - 火焰燃烧
 # GHAST           - 恶魂火球爆炸
-# GOLEM           - 铜傀儡打开箱子
+# GOLEM           - 铜傀儡打开箱子或门（门牌上写了 [傀儡] 或 [所有人] 时不受影响）
 # PISTON          - 活塞推动移除告示牌
 # SAPLING         - 树苗生长破坏告示牌
 # TNT             - TNT 实体爆炸
-# ZOMBIE          - 僵尸破门
 # UNKNOWN         - 其他未知攻击方式
+# VILLAGER        - 村民打开门
+# ZOMBIE          - 僵尸破门
 allowDestroyBy: []
 
 # 配置文件版本号（请勿修改）

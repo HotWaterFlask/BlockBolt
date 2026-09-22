@@ -128,7 +128,7 @@ Tab 补全支持玩家名、`[Everyone]`、`[More Users]`、`[Timer:3]`。
 | `groupFurnaces`、`groupDispensers`、`groupCauldrons`、`groupEnchantmentTables`、`groupBrewingStands` | 各类容器是否与相邻同类容器连锁。 |
 | `defaultDoorOpenSeconds` | 门/活板门自动关闭的默认秒数，`0` 或负数表示永不自动关。 |
 | `autoExpireDays` | 主人离线多少天后保护自动失效，`0` 或负数表示永不过期（仅在线模式有效）。 |
-| `allowDestroyBy` | 允许哪些方式破坏保护，可选 `CREEPER`、`TNT`、`BLOCK_EXPLOSION`、`ENDERMAN`、`FIRE`、`GHAST`、`GOLEM`、`PISTON`、`SAPLING`、`ZOMBIE`、`UNKNOWN`。 |
+| `allowDestroyBy` | 允许哪些方式破坏保护，可选 `CREEPER`、`TNT`、`BLOCK_EXPLOSION`、`ENDERMAN`、`FIRE`、`GHAST`、`GOLEM`、`PISTON`、`SAPLING`、`VILLAGER`、`ZOMBIE`、`UNKNOWN`。 |
 
 ### 方块标签写法
 
